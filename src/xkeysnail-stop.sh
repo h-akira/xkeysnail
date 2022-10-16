@@ -1,7 +1,6 @@
 #!/bin/sh
 #
-# stop.sh
-# Created:      Oct, 16, 2022 02:38:17 by h-akira
+# Created:      Oct, 16, 2022 02:38:17
 set -eu
 
 PID=`ps --no-heading -C xkeysnail -o pid | tr -d ' '`

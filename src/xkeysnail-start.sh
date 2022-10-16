@@ -1,7 +1,6 @@
 #!/bin/sh
 #
-# restart.sh
-# Created:      Oct, 16, 2022 02:49:24 by h-akira
+# Created:      Oct, 16, 2022 02:49:24
 set -eu
 
 if [ -e "$(which xkeysnail)" ]; then
