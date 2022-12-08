@@ -7,13 +7,16 @@ from xkeysnail.transform import *
 define_timeout(1)
 
 # [Global modemap] Change modifier keys as in xmodmap
-# CapsLockをCtrlにして，Superと左Altを入れ替える→入れ替えは廃止（2022年10月24日）
+# CapsLockをCtrlにして，Superと左Altを入れ替える
+# 入れ替えは廃止（2022年10月24日）
+# JIS配列キーボードをしようしたときにCapsLockがCtrlにならなかったので，
+# これも他の方法に変更するため廃止（2022年12月9日）
 ## left_alt=Key.LEFT_ALT
-define_modmap({
-    Key.CAPSLOCK: Key.LEFT_CTRL,
+## define_modmap({
+    ## Key.CAPSLOCK: Key.LEFT_CTRL,
     ## Key.LEFT_ALT: Key.LEFT_META,
     ## Key.LEFT_META: left_alt
-})
+## })
 
 define_keymap(lambda wm_class: wm_class not in ("Code", "Xfce4-terminal"), {
     # Cursor
@@ -52,6 +55,7 @@ define_keymap(re.compile("Google-chrome"), {
     K("Alt-Shift-w"): K("C-Shift-w"),
     K("Alt-q"): [K("Alt-f"),K("x")],
     K("Alt-f"): K("C-f"),
+    K("Alt-h"): K("C-h"),
 }, "Chrome")
 
 
