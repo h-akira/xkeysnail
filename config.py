@@ -18,7 +18,7 @@ define_timeout(1)
     ## Key.LEFT_META: left_alt
 ## })
 
-define_keymap(lambda wm_class: wm_class not in ("Code", "Xfce4-terminal"), {
+define_keymap(lambda wm_class: wm_class not in ("Code", "Xfce4-terminal", "Gnome-terminal"), {
     # Cursor
     K("C-b"): with_mark(K("left")),
     K("C-f"): with_mark(K("right")),
