@@ -11,12 +11,13 @@ define_timeout(1)
 # 入れ替えは廃止（2022年10月24日）
 # JIS配列キーボードをしようしたときにCapsLockがCtrlにならなかったので，
 # これも他の方法に変更するため廃止（2022年12月9日）
+# それだとChromeでCtrl-hなどがうまくいかなかったのでやっぱりxkeysnailで（2022年12月9日）
 ## left_alt=Key.LEFT_ALT
-## define_modmap({
-    ## Key.CAPSLOCK: Key.LEFT_CTRL,
+define_modmap({
+    Key.CAPSLOCK: Key.LEFT_CTRL,
     ## Key.LEFT_ALT: Key.LEFT_META,
     ## Key.LEFT_META: left_alt
-## })
+})
 
 define_keymap(lambda wm_class: wm_class not in ("Code", "Xfce4-terminal", "Gnome-terminal"), {
     # Cursor
