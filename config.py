@@ -57,6 +57,7 @@ define_keymap(re.compile("Google-chrome"), {
     K("Alt-q"): [K("Alt-f"),K("x")],
     K("Alt-f"): K("C-f"),
     K("Alt-h"): K("C-h"),
+    K("C-w"): K("w"),
 }, "Chrome")
 
 
